@@ -1,4 +1,4 @@
-name: "CodeQL for monprojet-api (NestJS)"
+name: "CodeQL for WrenchRider api (NestJS)"
 
 on:
   push:
