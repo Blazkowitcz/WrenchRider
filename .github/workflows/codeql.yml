@@ -44,7 +44,7 @@ jobs:
       uses: github/codeql-action/init@v3
       with:
         languages: ${{ matrix.language }}
-        build-mode: autobuild
+        build-mode: none
         # 👇 On analyse uniquement monprojet-api
         source-root: wrenchrider_api
 
