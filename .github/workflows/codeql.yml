@@ -33,11 +33,11 @@ jobs:
         node-version: '20'
 
     - name: Install dependencies (monprojet-api)
-      working-directory: monprojet-api
+      working-directory: wrenchrider_api
       run: npm ci
 
     - name: Build project (monprojet-api)
-      working-directory: monprojet-api
+      working-directory: wrenchrider_api
       run: npm run build
 
     - name: Initialize CodeQL
@@ -46,7 +46,7 @@ jobs:
         languages: ${{ matrix.language }}
         build-mode: autobuild
         # 👇 On analyse uniquement monprojet-api
-        source-root: monprojet-api
+        source-root: wrenchrider_api
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
