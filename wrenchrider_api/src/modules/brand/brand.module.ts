@@ -1,0 +1,10 @@
+import { Module } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { Brand } from './brand.entity';
+import { BrandService } from './brand.service';
+
+@Module({
+	imports: [TypeOrmModule.forFeature([Brand])],
+	providers: [BrandService],
+})
+export class BrandModule {}
