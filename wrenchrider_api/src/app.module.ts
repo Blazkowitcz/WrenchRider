@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserModule } from './modules/user/user.module';
 import { BrandModule } from './modules/brand/brand.module';
+import { BikeModule } from "./modules/bike/bike.module";
 import { AuthModule } from './modules/auth/auth.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 
@@ -31,6 +32,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 		UserModule,
 		AuthModule,
 		BrandModule,
+		BikeModule
 	],
 	controllers: [AppController],
 	providers: [AppService],
