@@ -4,8 +4,9 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserModule } from './modules/user/user.module';
 import { BrandModule } from './modules/brand/brand.module';
-import { BikeModule } from "./modules/bike/bike.module";
+import { BikeModule } from './modules/bike/bike.module';
 import { AuthModule } from './modules/auth/auth.module';
+import { UserBikeModule } from './modules/user-bike/user-bike.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 
 @Module({
@@ -32,7 +33,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 		UserModule,
 		AuthModule,
 		BrandModule,
-		BikeModule
+		BikeModule,
+		UserBikeModule,
 	],
 	controllers: [AppController],
 	providers: [AppService],
