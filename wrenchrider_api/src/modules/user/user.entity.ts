@@ -20,3 +20,7 @@ export class User {
 	@Column({ type: 'boolean', default: false })
 	isAdmin: boolean;
 }
+
+export interface UserRequest extends Request {
+	user: { id: string; isAdmin: boolean };
+}
