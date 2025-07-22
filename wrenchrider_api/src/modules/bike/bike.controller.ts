@@ -1,6 +1,7 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Controller, Get, Param, UseGuards } from '@nestjs/common';
 import { BikeService } from './bike.service';
 import { Bike } from './bike.entity';
+import { IsAuthGuard } from '../../common/guards/auth.guard';
 
 @Controller('bikes')
 export class BikeController {
@@ -12,6 +13,7 @@ export class BikeController {
 	 * @param brandId {String}
 	 * @return {Bike[]}
 	 */
+	@UseGuards(IsAuthGuard)
 	@Get('/brand/:brandId')
 	async getBikesFromBrand(
 		@Param('brandId') brandId: string,
