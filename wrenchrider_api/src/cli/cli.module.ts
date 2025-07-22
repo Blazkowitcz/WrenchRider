@@ -32,5 +32,4 @@ import { Bike } from '../modules/bike/bike.entity';
 	],
 	providers: [GenerateBrandsCommand],
 })
-export class CliModule {
-}
+export class CliModule {}
