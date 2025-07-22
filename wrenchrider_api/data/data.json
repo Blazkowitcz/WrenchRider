@@ -1,0 +1,466 @@
+[
+  {
+    "name": "Honda",
+    "color": "red"
+  },
+  {
+    "name": "Yamaha",
+    "color": "red"
+  },
+  {
+    "name": "Suzuki",
+    "color": "blue"
+  },
+  {
+    "name": "Kawasaki",
+    "color": "green"
+  },
+  {
+    "name": "Ducati",
+    "color": "red"
+  },
+  {
+    "name": "BMW",
+    "color": "blue"
+  },
+  {
+    "name": "Harley-Davidson",
+    "color": "orange"
+  },
+  {
+    "name": "Triumph",
+    "color": "black"
+  },
+  {
+    "name": "KTM",
+    "color": "orange"
+  },
+  {
+    "name": "Aprilia",
+    "color": "red",
+    "bikes": [
+      {
+        "name": "RSV4",
+        "power": 999,
+        "year": 2009
+      },
+      {
+        "name": "RSV4 Factory",
+        "power": 1099,
+        "year": 2021
+      },
+      {
+        "name": "RSV4 R APRC",
+        "power": 999,
+        "year": 2012
+      },
+      {
+        "name": "RSV4 XTrenta",
+        "power": 1099,
+        "year": 2023
+      },
+      {
+        "name": "RS 660",
+        "power": 659,
+        "year": 2020
+      },
+      {
+        "name": "RS 660 Extrema",
+        "power": 659,
+        "year": 2022
+      },
+      {
+        "name": "RS 660 Trofeo",
+        "power": 659,
+        "year": 2023
+      },
+      {
+        "name": "RS 457",
+        "power": 457,
+        "year": 2023
+      },
+      {
+        "name": "RS 125",
+        "power": 124,
+        "year": 2017
+      },
+      {
+        "name": "RS 50",
+        "power": 49,
+        "year": 2017
+      },
+      {
+        "name": "RSV Mille",
+        "power": 998,
+        "year": 1998
+      },
+      {
+        "name": "Tuono V4 1100 RR",
+        "power": 1077,
+        "year": 2017
+      },
+      {
+        "name": "Tuono V4 1100 Factory",
+        "power": 1077,
+        "year": 2021
+      },
+      {
+        "name": "Tuono 660",
+        "power": 659,
+        "year": 2020
+      },
+      {
+        "name": "Tuareg 660",
+        "power": 659,
+        "year": 2021
+      },
+      {
+        "name": "Dorsoduro 750",
+        "power": 749,
+        "year": 2008
+      },
+      {
+        "name": "Dorsoduro 1200",
+        "power": 1197,
+        "year": 2011
+      },
+      {
+        "name": "Dorsoduro 900",
+        "power": 896,
+        "year": 2017
+      },
+      {
+        "name": "Shiver 750",
+        "power": 749,
+        "year": 2007
+      },
+      {
+        "name": "Shiver 900",
+        "power": 896,
+        "year": 2017
+      },
+      {
+        "name": "Caponord 1200",
+        "power": 1197,
+        "year": 2014
+      },
+      {
+        "name": "RSV 1000",
+        "power": 1000,
+        "year": 2005
+      },
+      {
+        "name": "RSV 1000 R",
+        "power": 1000,
+        "year": 2004
+      },
+      {
+        "name": "RSV Tuono",
+        "power": 1000,
+        "year": 2004
+      },
+      {
+        "name": "SXV 4.5",
+        "power": 449,
+        "year": 2006
+      },
+      {
+        "name": "RXV",
+        "power": 449,
+        "year": 2006
+      },
+      {
+        "name": "SR GT 125",
+        "power": 125,
+        "year": null
+      },
+      {
+        "name": "SR GT 200",
+        "power": 174,
+        "year": null
+      },
+      {
+        "name": "SR Motard",
+        "power": 49,
+        "year": 2020
+      },
+      {
+        "name": "SR 50",
+        "power": 49,
+        "year": 2005
+      },
+      {
+        "name": "SR 160",
+        "power": 160,
+        "year": null
+      },
+      {
+        "name": "SR-Max 125",
+        "power": 124,
+        "year": null
+      },
+      {
+        "name": "SR-Max 300",
+        "power": 278,
+        "year": null
+      },
+      {
+        "name": "SportCity",
+        "power": null,
+        "year": null
+      },
+      {
+        "name": "Scarabeo",
+        "power": null,
+        "year": null
+      },
+      {
+        "name": "Atlantic",
+        "power": null,
+        "year": 2004
+      },
+      {
+        "name": "Mana 850 GT",
+        "power": 849,
+        "year": 2009
+      },
+      {
+        "name": "ETV 1000",
+        "power": 1000,
+        "year": 2004
+      },
+      {
+        "name": "Mojito",
+        "power": null,
+        "year": 2007
+      },
+      {
+        "name": "Blue Marlin",
+        "power": null,
+        "year": 2001
+      },
+      {
+        "name": "Classic",
+        "power": null,
+        "year": null
+      },
+      {
+        "name": "Pegaso",
+        "power": null,
+        "year": null
+      },
+      {
+        "name": "RSV 1000 R",
+        "power": 1000,
+        "year": 2004
+      },
+      {
+        "name": "SL 750",
+        "power": 749,
+        "year": 2007
+      },
+      {
+        "name": "SMV 750",
+        "power": 750,
+        "year": 2009
+      },
+      {
+        "name": "Tuareg (ancienne)",
+        "power": null,
+        "year": 1984
+      }
+    ]
+  },
+  {
+    "name": "Royal Enfield",
+    "color": "red"
+  },
+  {
+    "name": "Moto Guzzi",
+    "color": "red"
+  },
+  {
+    "name": "Indian",
+    "color": "maroon"
+  },
+  {
+    "name": "Bajaj",
+    "color": "blue"
+  },
+  {
+    "name": "Hero MotoCorp",
+    "color": "orange"
+  },
+  {
+    "name": "Bimota",
+    "color": "red"
+  },
+  {
+    "name": "Benelli",
+    "color": "green"
+  },
+  {
+    "name": "MV Agusta",
+    "color": "blue"
+  },
+  {
+    "name": "Norton",
+    "color": "black"
+  },
+  {
+    "name": "Qianjiang (QJMotor)",
+    "color": "blue"
+  },
+  {
+    "name": "CFMoto",
+    "color": "blue"
+  },
+  {
+    "name": "Piaggio",
+    "color": "light blue"
+  },
+  {
+    "name": "Vespa",
+    "color": "blue"
+  },
+  {
+    "name": "Aprilia",
+    "color": "red"
+  },
+  {
+    "name": "Energica",
+    "color": "green"
+  },
+  {
+    "name": "Zero Motorcycles",
+    "color": "black"
+  },
+  {
+    "name": "LiveWire",
+    "color": "orange"
+  },
+  {
+    "name": "Evoke",
+    "color": "blue"
+  },
+  {
+    "name": "Zongshen",
+    "color": "blue"
+  },
+  {
+    "name": "Lifan",
+    "color": "black"
+  },
+  {
+    "name": "Loncin",
+    "color": "blue"
+  },
+  {
+    "name": "Bultaco",
+    "color": "black"
+  },
+  {
+    "name": "Buell",
+    "color": "black"
+  },
+  {
+    "name": "BSA",
+    "color": "black"
+  },
+  {
+    "name": "Cagiva",
+    "color": "blue"
+  },
+  {
+    "name": "CCM",
+    "color": "red"
+  },
+  {
+    "name": "Daelim",
+    "color": "red"
+  },
+  {
+    "name": "Derbi",
+    "color": "red"
+  },
+  {
+    "name": "Dnepr",
+    "color": "black"
+  },
+  {
+    "name": "Gilera",
+    "color": "red"
+  },
+  {
+    "name": "Husqvarna",
+    "color": "blue"
+  },
+  {
+    "name": "Husaberg",
+    "color": "blue"
+  },
+  {
+    "name": "Italjet",
+    "color": "blue"
+  },
+  {
+    "name": "Jawa",
+    "color": "red"
+  },
+  {
+    "name": "Keeway",
+    "color": "red"
+  },
+  {
+    "name": "Kymco",
+    "color": "orange"
+  },
+  {
+    "name": "MZ",
+    "color": "red"
+  },
+  {
+    "name": "Peugeot Motocycles",
+    "color": "blue"
+  },
+  {
+    "name": "Polaris (Indian)",
+    "color": "red"
+  },
+  {
+    "name": "Rieju",
+    "color": "red"
+  },
+  {
+    "name": "Sherco",
+    "color": "orange"
+  },
+  {
+    "name": "SYM",
+    "color": "red"
+  },
+  {
+    "name": "SWM",
+    "color": "red"
+  },
+  {
+    "name": "TGB",
+    "color": "blue"
+  },
+  {
+    "name": "Ural",
+    "color": "black"
+  },
+  {
+    "name": "Victory",
+    "color": "red"
+  },
+  {
+    "name": "Voxan",
+    "color": "blue"
+  },
+  {
+    "name": "Zündapp",
+    "color": "green"
+  }
+]
