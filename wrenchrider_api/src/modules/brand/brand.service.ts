@@ -9,7 +9,8 @@ export class BrandService {
 	constructor(
 		@InjectRepository(Brand)
 		private readonly brandRepository: Repository<Brand>,
-	) {}
+	) {
+	}
 
 	/**
 	 * Add new brand
@@ -32,6 +33,7 @@ export class BrandService {
 	/**
 	 * Get brand by its name
 	 * @param name
+	 * @returns {Brand|null}
 	 */
 	async getBrandByName(name: string): Promise<Brand | null> {
 		return this.brandRepository.findOne({ where: { name } });
