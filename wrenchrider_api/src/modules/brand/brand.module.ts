@@ -11,5 +11,4 @@ import { AuthModule } from '../auth/auth.module';
 	providers: [BrandService],
 	exports: [BrandService],
 })
-export class BrandModule {
-}
+export class BrandModule {}

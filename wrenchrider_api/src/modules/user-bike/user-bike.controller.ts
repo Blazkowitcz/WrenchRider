@@ -10,6 +10,7 @@ import {
 	UseGuards,
 	Param,
 	Delete,
+	Inject,
 } from '@nestjs/common';
 import { UserBikeService } from './user-bike.service';
 import { CreateUserBikeDto } from './dtos/create-user-bike.dto';
@@ -17,11 +18,16 @@ import { EditUserBikeDto } from './dtos/edit-user-bike.dto';
 import { UserBike } from './user-bike.entity';
 import { UserRequest } from '../user/user.entity';
 import { IsAuthGuard } from '../../common/guards/auth.guard';
+import { WINSTON_MODULE_NEST_PROVIDER } from 'nest-winston';
+import { Logger } from 'winston';
 
 @Controller('user-bikes')
 export class UserBikeController {
-	constructor(private readonly userBikeService: UserBikeService) {
-	}
+	constructor(
+		private readonly userBikeService: UserBikeService,
+		@Inject(WINSTON_MODULE_NEST_PROVIDER)
+		private readonly logger: Logger,
+	) {}
 
 	/**
 	 * Add user bike
@@ -43,7 +49,7 @@ export class UserBikeController {
 				mileage: dto.mileage,
 			});
 		} catch (error) {
-			console.log(error);
+			this.logger.error(error);
 			throw new HttpException(
 				'Server Error',
 				HttpStatus.INTERNAL_SERVER_ERROR,
@@ -61,7 +67,15 @@ export class UserBikeController {
 	async getAllBikesFromUser(
 		@Req() request: UserRequest,
 	): Promise<UserBike[]> {
-		return this.userBikeService.getAllBikesFromUser(request.user.id);
+		try {
+			return this.userBikeService.getAllBikesFromUser(request.user.id);
+		} catch (error) {
+			this.logger.error(error);
+			throw new HttpException(
+				'Failed to create user',
+				HttpStatus.INTERNAL_SERVER_ERROR,
+			);
+		}
 	}
 
 	/**
@@ -78,15 +92,23 @@ export class UserBikeController {
 		@Req() request: UserRequest,
 		@Body() dto: EditUserBikeDto,
 	): Promise<boolean> {
-		const userBike = await this.userBikeService.getUserBike(
-			request.user.id,
-			userBikeId,
-		);
-		if (userBike) {
-			await this.userBikeService.editUserBike(userBike, dto);
-			return true;
+		try {
+			const userBike = await this.userBikeService.getUserBike(
+				request.user.id,
+				userBikeId,
+			);
+			if (userBike) {
+				await this.userBikeService.editUserBike(userBike, dto);
+				return true;
+			}
+			return false;
+		} catch (error) {
+			this.logger.error(error);
+			throw new HttpException(
+				'Failed to create user',
+				HttpStatus.INTERNAL_SERVER_ERROR,
+			);
 		}
-		return false;
 	}
 
 	/**
@@ -101,14 +123,22 @@ export class UserBikeController {
 		@Param('userBikeId') userBikeId: string,
 		@Req() request: UserRequest,
 	): Promise<boolean> {
-		const userBike = await this.userBikeService.getUserBike(
-			request.user.id,
-			userBikeId,
-		);
-		if (userBike) {
-			await this.userBikeService.removeUserBike(userBike);
-			return true;
+		try {
+			const userBike = await this.userBikeService.getUserBike(
+				request.user.id,
+				userBikeId,
+			);
+			if (userBike) {
+				await this.userBikeService.removeUserBike(userBike);
+				return true;
+			}
+			return false;
+		} catch (error) {
+			this.logger.error(error);
+			throw new HttpException(
+				'Failed to create user',
+				HttpStatus.INTERNAL_SERVER_ERROR,
+			);
 		}
-		return false;
 	}
 }

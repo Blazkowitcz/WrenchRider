@@ -8,6 +8,7 @@ import { BikeModule } from './modules/bike/bike.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { UserBikeModule } from './modules/user-bike/user-bike.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { LoggerModule } from './common/logger/winston.module';
 
 @Module({
 	imports: [
@@ -30,6 +31,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 				entities: [`${__dirname}/modules/**/**.entity{.ts,.js}`],
 			}),
 		}),
+		LoggerModule,
 		UserModule,
 		AuthModule,
 		BrandModule,
