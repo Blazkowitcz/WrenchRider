@@ -9,11 +9,13 @@ export class UserService {
 	constructor(
 		@InjectRepository(User)
 		private readonly userRepository: Repository<User>,
-	) {}
+	) {
+	}
 
 	/**
 	 * Add new user
 	 * @param dto {CreateUserDto}
+	 * @returns {User}
 	 */
 	async addUser(dto: CreateUserDto): Promise<User> {
 		const user = this.userRepository.create(dto);
@@ -23,6 +25,7 @@ export class UserService {
 	/**
 	 * Find user by its email
 	 * @param email {String}
+	 * @returns {User|null}
 	 */
 	async getUserByEmail(email: string): Promise<User | null> {
 		return this.userRepository.findOne({ where: { email } });
