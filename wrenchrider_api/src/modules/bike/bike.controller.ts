@@ -4,8 +4,14 @@ import { Bike } from './bike.entity';
 
 @Controller('bikes')
 export class BikeController {
-	constructor(private bikeService: BikeService) {}
+	constructor(private bikeService: BikeService) {
+	}
 
+	/**
+	 * Get all bikes from a brand
+	 * @param brandId {String}
+	 * @return {Bike[]}
+	 */
 	@Get('/brand/:brandId')
 	async getBikesFromBrand(
 		@Param('brandId') brandId: string,
