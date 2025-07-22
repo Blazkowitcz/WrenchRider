@@ -27,6 +27,7 @@ export class UserBikeController {
 	 * Add user bike
 	 * @param request {UserRequest}
 	 * @param dto {CreateUserBikeDto}
+	 * @returns {UserBike}
 	 */
 	@UseGuards(IsAuthGuard)
 	@Post()
@@ -53,6 +54,7 @@ export class UserBikeController {
 	/**
 	 * Get all bikes from user
 	 * @param request {UserRequest}
+	 * @returns {UserBike[]}
 	 */
 	@UseGuards(IsAuthGuard)
 	@Get()
@@ -67,6 +69,7 @@ export class UserBikeController {
 	 * @param userBikeId {String}
 	 * @param request {UserRequest}
 	 * @param dto {EditUserBikeDto}
+	 * @returns {Boolean}
 	 */
 	@UseGuards(IsAuthGuard)
 	@Put(':userBikeId')
@@ -87,9 +90,10 @@ export class UserBikeController {
 	}
 
 	/**
-	 *
+	 * Remove user bike
 	 * @param userBikeId
 	 * @param request
+	 * @returns {Boolean}
 	 */
 	@UseGuards(IsAuthGuard)
 	@Delete(':userBikeId')
