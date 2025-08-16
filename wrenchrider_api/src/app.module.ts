@@ -7,6 +7,8 @@ import { BrandModule } from './modules/brand/brand.module';
 import { BikeModule } from './modules/bike/bike.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { UserBikeModule } from './modules/user-bike/user-bike.module';
+import { MaintenanceModule } from './modules/maintenance/maintenance.module';
+import { UserBikeMaintenanceModule } from './modules/user-bike-maintenance/user-bike-maintenance.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { LoggerModule } from './common/logger/winston.module';
 
@@ -37,6 +39,8 @@ import { LoggerModule } from './common/logger/winston.module';
 		BrandModule,
 		BikeModule,
 		UserBikeModule,
+		MaintenanceModule,
+		UserBikeMaintenanceModule,
 	],
 	controllers: [AppController],
 	providers: [AppService],

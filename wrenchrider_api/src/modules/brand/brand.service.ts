@@ -9,8 +9,7 @@ export class BrandService {
 	constructor(
 		@InjectRepository(Brand)
 		private readonly brandRepository: Repository<Brand>,
-	) {
-	}
+	) {}
 
 	/**
 	 * Add new brand
