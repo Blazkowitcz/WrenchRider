@@ -1,5 +1,5 @@
 import { InjectRepository } from '@nestjs/typeorm';
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { Repository } from 'typeorm';
 import { UserBike } from './user-bike.entity';
 import { CreateUserBikeDto } from './dtos/create-user-bike.dto';
@@ -33,13 +33,14 @@ export class UserBikeService {
 		});
 	}
 
-	async getUserBike(
-		userId: string,
-		userBikeId: string,
-	): Promise<UserBike | null> {
-		return await this.userBikeRepository.findOne({
+	async getUserBike(userId: string, userBikeId: string): Promise<UserBike> {
+		const userBike = await this.userBikeRepository.findOne({
 			where: { id: userBikeId, user: { id: userId } },
 		});
+		if (userBike) {
+			return userBike;
+		}
+		throw new NotFoundException();
 	}
 
 	/**
