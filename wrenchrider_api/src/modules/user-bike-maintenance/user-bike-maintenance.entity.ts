@@ -16,6 +16,6 @@ export class UserBikeMaintenance {
 	@Column({ type: Date })
 	date: Date;
 
-	@Column({ type: 'text' })
-	description: String;
+	@Column({ type: 'longtext' })
+	description: string;
 }
