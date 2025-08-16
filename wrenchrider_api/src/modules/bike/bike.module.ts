@@ -11,5 +11,4 @@ import { AuthModule } from '../auth/auth.module';
 	controllers: [BikeController],
 	exports: [BikeService],
 })
-export class BikeModule {
-}
+export class BikeModule {}
