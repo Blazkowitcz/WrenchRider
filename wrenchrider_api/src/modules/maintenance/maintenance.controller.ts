@@ -4,7 +4,6 @@ import {
 	HttpException,
 	HttpStatus,
 	Inject,
-	Param,
 	UseGuards,
 } from '@nestjs/common';
 import { MaintenanceService } from './maintenance.service';

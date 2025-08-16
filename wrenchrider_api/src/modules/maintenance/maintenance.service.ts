@@ -1,5 +1,5 @@
 import { InjectRepository } from '@nestjs/typeorm';
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { Repository } from 'typeorm';
 import { Maintenance } from './maintenance.entity';
 import { CreateMaintenanceDto } from './dtos/create-maintenance.dto';
@@ -25,7 +25,21 @@ export class MaintenanceService {
 	 * Get all maintenances
 	 * @returns {Maintenance[]}
 	 */
-	async getAllMaintenances() {
+	async getAllMaintenances(): Promise<Maintenance[]> {
 		return this.maintenanceRepository.find();
+	}
+
+	/**
+	 * Get maintenance by its id
+	 * @param id
+	 */
+	async getMaintenanceById(id: string) {
+		const maintenance = await this.maintenanceRepository.findOne({
+			where: { id: id },
+		});
+		if (maintenance) {
+			return maintenance;
+		}
+		throw new NotFoundException();
 	}
 }
